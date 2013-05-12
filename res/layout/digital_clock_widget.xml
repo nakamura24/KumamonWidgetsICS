@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:layout_marginBottom="@dimen/widget_margin"
+    android:layout_marginLeft="@dimen/widget_margin"
+    android:layout_marginRight="@dimen/widget_margin"
+    android:layout_marginTop="@dimen/widget_margin"
+	android:gravity="center" >
+
+	<ImageView
+		android:id="@+id/imageView_back"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:src="@drawable/digital" 
+		android:contentDescription="@string/app_name"
+		tools:context=".KumamonDigitalClockWidget"
+		/>
+	<LinearLayout
+		android:orientation="vertical"
+		android:gravity="center_horizontal|clip_vertical"
+		android:paddingTop="25dp"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+	
+		<TextView
+			android:id="@+id/textView_date"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="#ff000000"
+			android:textSize="12sp"
+			android:textStyle="bold"
+			android:text="" />
+		<TextView
+			android:id="@+id/textView_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="#000000"
+			android:textSize="30sp"
+			android:textStyle="bold"
+			android:shadowDx="3.0"
+			android:shadowDy="3.0"
+			android:shadowRadius="2.0"
+			android:shadowColor="#ffffff"
+			android:text="" />
+	</LinearLayout>
+
+</RelativeLayout>

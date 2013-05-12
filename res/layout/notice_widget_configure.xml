@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="center_horizontal"
+	android:orientation="vertical" >
+
+    <CheckBox
+        android:id="@+id/checkBox_allday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkBox_allday" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView_priod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textView_priod" />
+
+	   <EditText
+	       android:id="@+id/editText_priod"
+	       android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:inputType="number" >
+	   </EditText>
+    </LinearLayout>
+
+    <Button
+		android:id="@+id/button"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/OKButton"
+		android:onClick="onOKButtonClick"
+		/>
+
+</LinearLayout>

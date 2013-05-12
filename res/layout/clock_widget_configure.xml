@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="center_horizontal"
+	android:orientation="vertical" >
+	
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+
+		<RadioGroup android:id="@+id/radiogroup"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+
+			<RadioButton android:id="@+id/radioButton1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/am"
+				/>
+			<RadioButton android:id="@+id/radioButton2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/pm"
+				/>
+		</RadioGroup>
+		<Spinner
+			android:id="@+id/spinner1" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:entries="@array/hours"
+			/>
+		<Spinner
+			android:id="@+id/spinner2" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:entries="@array/mins" 
+			/>
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+
+		<ToggleButton
+			android:id="@+id/toggleButton1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="onToggleButtonClick"
+			/>
+		<CheckBox
+			android:id="@+id/checkBox1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/repeat"
+			/>
+
+	</LinearLayout>
+	<Button
+		android:id="@+id/button"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/OKButton"
+		android:onClick="onOKButtonClick"
+		/>
+
+</LinearLayout>

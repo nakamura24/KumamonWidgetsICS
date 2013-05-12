@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	package="jp.kumamon.widgets" 
+	android:installLocation="auto"
+	android:versionCode="18" 
+	android:versionName="1.0.18">
+
+	<uses-sdk 
+	    android:minSdkVersion="14" 
+	    android:targetSdkVersion="17" />
+
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.READ_CALENDAR" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+	<application 
+	    android:allowBackup="true" 
+	    android:icon="@drawable/ic_launcher"
+		android:label="@string/ICS_app_name" 
+		android:theme="@style/AppTheme">
+
+		<receiver 
+		    android:name=".battery.KumamonBatteryWidget"
+			android:label="@string/BatteryWidget">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<meta-data 
+			    android:name="android.appwidget.provider"
+				android:resource="@xml/battery_widget" />
+		</receiver>
+		<service android:name=".battery.KumamonBatteryWidget$WidgetService" />
+
+		<receiver 
+		    android:name=".clocks.KumamonAnalogClockWidget"
+			android:label="@string/AnalogClockWidget">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<meta-data 
+			    android:name="android.appwidget.provider"
+				android:resource="@xml/analog_clock_widget" />
+		</receiver>
+		<activity 
+		    android:name=".clocks.AnalogClockWidgetConfigure"
+			android:exported="false" 
+			android:theme="@style/Theme.Dialog">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+			</intent-filter>
+		</activity>
+		<activity 
+		    android:name=".clocks.AnalogClockWidgetAlarm"
+			android:exported="false" 
+			android:theme="@style/Theme.Dialog">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_ALARM" />
+			</intent-filter>
+		</activity>
+
+		<receiver 
+		    android:name=".clocks.KumamonDigitalClockWidget"
+			android:label="@string/DigitalClockWidget">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<meta-data 
+			    android:name="android.appwidget.provider"
+				android:resource="@xml/digital_clock_widget" />
+		</receiver>
+		<service android:name=".clocks.KumamonDigitalClockWidget$WidgetService" />
+		<activity 
+		    android:name=".clocks.DigitalClockWidgetConfigure"
+			android:exported="false" 
+			android:theme="@style/Theme.Dialog">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+			</intent-filter>
+		</activity>
+		<activity 
+		    android:name=".clocks.DigitalClockWidgetAlarm"
+			android:exported="false" 
+			android:theme="@style/Theme.Dialog">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_ALARM" />
+			</intent-filter>
+		</activity>
+
+		<receiver 
+		    android:name=".forecast.KumamonForecastWidget"
+			android:label="@string/ForecastWidget">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+				<action android:name="jp.kumamon.widgets.forecast.APPWIDGET_ALARM" />
+			</intent-filter>
+			<meta-data 
+			    android:name="android.appwidget.provider"
+				android:resource="@xml/forecast_widget" />
+		</receiver>
+		<activity 
+		    android:name=".forecast.ForecastWidgetConfigure"
+			android:exported="false" 
+			android:theme="@style/Theme.Dialog">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+			</intent-filter>
+		</activity>
+		<activity 
+		    android:name=".forecast.ForecastWeeklyDialog"
+			android:exported="false" 
+			android:theme="@style/Theme.Dialog">
+			<intent-filter>
+				<action android:name="jp.kumamon.widgets.forecast.APPWIDGET_WEEKLY" />
+			</intent-filter>
+		</activity>
+
+		<receiver 
+		    android:name=".sticky.KumamonStickyWidget"
+			android:label="@string/StickyWidget">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<meta-data 
+			    android:name="android.appwidget.provider"
+				android:resource="@xml/sticky_widget" />
+		</receiver>
+		<activity 
+		    android:name=".sticky.StickyWidgetConfigure"
+			android:exported="false" 
+			android:theme="@style/Theme.Dialog">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+			</intent-filter>
+		</activity>
+
+		<receiver 
+		    android:name=".ics.forecast.KumamonForecastWidget"
+			android:label="@string/ICS_ForecastWidget">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+				<action android:name="jp.kumamon.widgets.ics.forecast.APPWIDGET_ALARM" />
+			</intent-filter>
+			<meta-data 
+			    android:name="android.appwidget.provider"
+				android:resource="@xml/ics_forecast_widget" />
+		</receiver>
+		<service 
+		    android:name=".ics.forecast.ForecastWidgetService"
+			android:exported="false" 
+			android:permission="android.permission.BIND_REMOTEVIEWS" />
+		<activity 
+		    android:name=".ics.forecast.ForecastWidgetConfigure"
+			android:exported="false" 
+			android:theme="@style/Theme.Dialog">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+			</intent-filter>
+		</activity>
+
+		<receiver android:name=".ics.notice.KumamonNoticeWidget"
+			android:label="@string/ICS_NoticeWidget">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<meta-data android:name="android.appwidget.provider"
+				android:resource="@xml/notice_widget" />
+		</receiver>
+		<service 
+		    android:name=".ics.notice.KumamonNoticeWidget$WidgetService"
+			android:exported="false" />
+		<service 
+		    android:name=".ics.notice.NoticeWidgetService"
+			android:exported="false" 
+			android:permission="android.permission.BIND_REMOTEVIEWS" />
+		<activity 
+		    android:name=".ics.notice.NoticeWidgetConfigure"
+			android:exported="false" 
+			android:theme="@style/Theme.Dialog">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+			</intent-filter>
+		</activity>
+		<activity 
+		    android:name=".ics.notice.NoticeEventDialog"
+			android:exported="false" 
+			android:theme="@style/Theme.Dialog" />
+
+		<receiver 
+		    android:name=".ics.sticky.KumamonStickyWidget"
+			android:label="@string/ICS_StickyWidget">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+			<meta-data 
+			    android:name="android.appwidget.provider"
+				android:resource="@xml/ics_sticky_widget" />
+		</receiver>
+		<service 
+		    android:name=".ics.sticky.StickyWidgetService"
+			android:exported="false" 
+			android:permission="android.permission.BIND_REMOTEVIEWS" />
+		<activity 
+		    android:name=".ics.sticky.StickyWidgetConfigure"
+			android:exported="false" 
+			android:theme="@style/Theme.Dialog">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+			</intent-filter>
+		</activity>
+
+	</application>
+
+</manifest>

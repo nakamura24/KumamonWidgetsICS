@@ -1,0 +1,91 @@
+﻿<resources>
+
+    <string name="app_name">くまモンウィジェット集</string>
+    <string name="ICS_app_name">くまモンウィジェット集(4.0以降)</string>
+    <string name="ClockWidgets">くまモン時計 (アラーム機能有)</string>
+    <string name="AnalogClockWidget">くまモンアナログ時計 (アラーム機能有)</string>
+    <string name="BatteryWidget">くまモン電池残量</string>
+    <string name="DigitalClockWidget">くまモンデジタル時計 (アラーム機能有)</string>
+    <string name="ForecastWidget">くまモン天気予報 (日本気象協会発表に基づく)</string>
+    <string name="StickyWidget">くまモン付箋 (Android 4.0以降音声入力対応)</string>
+    <string name="ICS_ForecastWidget">くまモン天気予報 (スタック表示版)</string>
+    <string name="ICS_NoticeWidget">くまモンカレンダー予定表示</string>
+    <string name="ICS_StickyWidget">くまモン付箋 (スタック表示版)</string>
+	<string name="common_text_ok">ＯＫ</string>
+	<string name="common_text_cancel">キャンセル</string>
+	<string name="common_text_warning">警告</string>
+	<string name="common_text_error">エラー</string>
+	<string name="common_text_check">確認</string>
+	<string name="common_text_send">送信</string>
+	<string name="common_text_bug_report">予期しないエラーが発生しました。開発元にエラーを送信してください。</string>
+    <string name="Hint">入力して下さい</string>
+    <string name="icon">アイコン</string>
+    <string name="back">背景</string>
+    <string-array name="icons">
+        <item>くまモン１</item>
+       	<item>くまモン2</item>
+        <item>くまモン3</item>
+       	<item>くまモン4</item>
+    </string-array>
+    <string-array name="backs">
+        <item>パターン１</item>
+        <item>パターン2</item>
+        <item>パターン3</item>
+        <item>パターン4</item>
+        <item>パターン5</item>
+        <item>パターン6</item>
+        <item>パターン7</item>
+        <item>パターン8</item>
+        <item>パターン9</item>
+        <item>パターン10</item>
+	</string-array>
+    <string name="CleanButton">Clean</string>
+    <string name="SpeechButton">音声認識</string>
+    <string name="OKButton">OK</string>
+    <string name="pref">都道府県</string>
+    <string name="city">都市</string>
+    <string name="forecast">日本気象協会%s現在</string>
+    <string name="onlyforecast">天気予報のみ表示</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+	<string-array name="hours">
+        <item>0時</item>
+        <item>1時</item>
+        <item>2時</item>
+		<item>3時</item>
+		<item>4時</item>
+		<item>5時</item>
+		<item>6時</item>
+		<item>7時</item>
+		<item>8時</item>
+		<item>9時</item>
+		<item>10時</item>
+		<item>11時</item>
+	</string-array>
+    <string name="min">分</string>
+    <string-array name="mins">
+		<item>0分</item>
+		<item>5分</item>
+		<item>10分</item>
+		<item>15分</item>
+		<item>20分</item>
+		<item>25分</item>
+		<item>30分</item>
+		<item>35分</item>
+		<item>40分</item>
+		<item>45分</item>
+		<item>50分</item>
+		<item>55分</item>
+ 	</string-array>
+    <string name="repeat">繰り返し</string>
+    <string name="StopButton">停止</string>
+    <string name="title_message">予定はなかモン</string>
+    <string name="google_account"></string>
+    <string name="checkBox_allday">当日の予定を全て表示</string>
+    <string name="textView_priod">表示する期間(日)</string>
+    <string name="textView_title">タイトル</string>
+    <string name="textView_date">日時</string>
+    <string name="textView_location">場所</string>
+    <string name="textView_description">詳細</string>
+    
+</resources>
